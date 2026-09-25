@@ -2,69 +2,68 @@
 # EcoEnchants
 # by Auxilor
 #
-
-# Options for enchanting items in the enchanting table
+# 附魔台中附魔物品的选项
 enchanting-table:
-  enabled: true # If custom enchantments should be available from enchanting tables
-  book-multiplier: 0.5 # Multiplier applied to the chance of getting an enchantment on a book (to balance enchant numbers)
-  maximum-obtainable-level: 30 # The max level for the enchanting table. EcoEnchants doesn't change the limit, but if you have a plugin that does, adjust this to match.
-  cap: 5 # The maximum amount of enchantments to get at any given time
-  reduction: 2.2 # The chance to get each subsequent enchantment is divided by this number, e.g. 2nd enchant is 2.2x less likely than 1st, 3rd is 2.2x less likely again, etc
+  enabled: true # 自定义附魔是否可以通过附魔台获得
+  book-multiplier: 0.5 # 对附魔书获得附魔概率应用的乘数（用于平衡附魔数量）
+  maximum-obtainable-level: 30 # 附魔台的最高等级。EcoEnchants 不会改变该限制，但如果你有插件改变了它，请调整此项以匹配。
+  cap: 5 # 任意一次附魔可获得的最大魔咒数量
+  reduction: 2.2 # 获得每个后续附魔的概率都会除以此数值，例如第2个附魔的概率是第1个的 2.2 分之一，第3个再除以 2.2，依此类推
 
-# Options for obtaining custom enchants from villagers
+# 从村民处获得自定义附魔的选项
 villager:
-  enabled: true # If custom enchantments should be available from villagers
-  pass-through-chance: 25 # The chance to leave the book as-is with a vanilla/no enchantment applied.
-  book-multiplier: 0.14 # Multiplier applied to the chance of getting an enchantment on a book (to balance enchant numbers)
-  reduction: 5 # The chance to get each subsequent enchantment is divided by this number, e.g. 2nd enchant is 5x less likely than 1st, 3rd is 5x less likely again, etc
+  enabled: true # 自定义附魔是否可以通过村民获得
+  pass-through-chance: 25 # 保持书籍原样、应用原版/无附魔的概率
+  book-multiplier: 0.14 # 对附魔书获得附魔概率应用的乘数（用于平衡附魔数量）
+  reduction: 5 # 获得每个后续附魔的概率都会除以此数值，例如第2个附魔的概率是第1个的 5 分之一，第3个再除以 5，依此类推
 
-# Options for obtaining custom enchants in natural loot
+# 在自然战利品中获得自定义附魔的选项
 loot:
-  enabled: true # If custom enchantments should be available from natural loot
-  book-multiplier: 0.5 # Multiplier applied to the chance of getting an enchantment on a book (to balance enchant numbers)
-  reduction: 7.5 # The chance to get each subsequent enchantment is divided by this number, e.g. 2nd enchant is 7.5x less likely than 1st, 3rd is 7.5x less likely again, etc
+  enabled: true # 自定义附魔是否可以在自然战利品中获得
+  book-multiplier: 0.5 # 对附魔书获得附魔概率应用的乘数（用于平衡附魔数量）
+  reduction: 7.5 # 获得每个后续附魔的概率都会除以此数值，例如第2个附魔的概率是第1个的 7.5 分之一，第3个再除以 7.5，依此类推
 
-# Options for merging items in an anvil
+# 在铁砧中合并物品的选项
 anvil:
-  vanilla-costs: false # If true, uses only vanilla XP costs (ignores cost-exponent). Custom enchants still work.
-  cost-exponent: 0.95 # The exponent for each enchant level to prevent constant "Too Expensive!" problems
-  enchant-limit: -1 # The limit for the amount of enchantments on an item (-1 to disable)
-  use-rework-penalty: true # If the rework penalty should be applied
-  max-repair-cost: 40 # Override the maximum repair cost (-1 to make it infinite). When clamp-repair-cost is false, exceeding this cost will block the enchantment.
-  clamp-repair-cost: true # If the repair cost should be clamped to the maximum repair cost
+  vanilla-costs: false # 如果为 true，则仅使用原版经验消耗（忽略 cost-exponent）。自定义附魔仍然生效。
+  cost-exponent: 0.95 # 每个附魔等级使用的指数，用于避免频繁出现“过于昂贵！”问题
+  enchant-limit: -1 # 物品上附魔数量的限制（-1 表示禁用限制）
+  use-rework-penalty: true # 是否应用重命名/修复惩罚
+  max-repair-cost: 40 # 覆盖最大修复消耗（-1 表示无限）。当 clamp-repair-cost 为 false 时，超过此消耗将阻止附魔。
+  clamp-repair-cost: true # 是否将修复消耗限制在最大修复消耗以内
 
-# Options for how enchantments are displayed on items
+# 物品上附魔显示方式的选项
 display:
-  # If you disable display, enchantments will not show up on items. Only disable if you are handling display elsewhere.
-  # Changing this will require a server restart.
+  # 如果禁用显示，附魔将不会显示在物品上。仅当你已在其他地方处理显示时才禁用。
+  # 更改此项需要重启服务器。
   enabled: true
-  # If enchantments should be displayed on the bottom of the item's lore
+  # 附魔是否应显示在物品描述（lore）的底部
   enchantments-below-lore: false
 
   numerals:
-    enabled: true # If numerals should be used for the enchantment levels
-    threshold: 10 # Above this, numbers will be used instead of numerals
+    enabled: true # 附魔等级是否使用罗马数字
+    threshold: 10 # 超过此数值时，将使用数字而不是罗马数字
 
-  # Options for not met lines: https://hub.auxilor.io/wiki/libreforge/configuring-a-condition#example-condition-config
+  # 未满足条件的行选项：https://hub.auxilor.io/wiki/libreforge/configuring-a-condition#example-condition
   not-met:
-    format: "<strikethrough>" # Enchantments with any not-met-lines active will have this format added to them
+    format: "<strikethrough>" # 当附魔有任何未满足条件行激活时，将添加此格式
 
   above-max-level:
-    enabled: true # If enchantments above their max level should have a custom format
-    format: "<gradient:#1D976C:#93F9B9>" # The format to apply
-    level-only: true # If only the level should be formatted
+    enabled: true # 超过最大等级的附魔是否应使用自定义格式
+    format: "<gradient:#1D976C:#93F9B9>" # 要应用的格式
+    level-only: true # 是否仅对等级应用格式
 
   sort:
-    type: false # If enchantments should be sorted by time
-    type-order: # The order for types to be sorted in. Types not in this list will not be displayed if type sorting is enabled.
+    type: false # 附魔是否应按时间排序
+    type-order: # 类型排序顺序。如果启用类型排序，不在此列表中的类型将不会显示。
       - normal
       - special
       - curse
 
-    length: false # If enchantments should be sorted by length
+    length: false # 附魔是否应按长度排序
 
-    rarity: false # If enchantments should be sorted by rarity
-    rarity-order: # The order for rarities to be sorted in. Rarities not in this list will not be displayed if rarity sorting is enabled.
+    rarity: false # 附魔是否应按稀有度排序
+    rarity-order: # 稀有度排序顺序。如果启用稀有度排序，不在此列表中的稀有度将不会显示。
       - common
       - uncommon
       - rare
@@ -74,34 +73,34 @@ display:
       - veryspecial
 
   collapse:
-    enabled: true # If enchantments should be collapsed in lore
-    threshold: 9 # Above this amount, enchantments will be collapsed
-    per-line: 2 # The amount of enchantments to put in each line
-    delimiter: ",&r " # The delimiter between enchantments
+    enabled: true # 附魔是否应在 lore 中折叠显示
+    threshold: 9 # 超过此数量时，附魔将被折叠
+    per-line: 2 # 每行放置的附魔数量
+    delimiter: ",&r " # 附魔之间的分隔符
 
   descriptions:
-    enabled: true # If enchantment descriptions should be shown in lore
-    threshold: 5 # Above this amount, enchantment descriptions will not be shown
-    word-wrap: 27 # Number of characters to have on each line
+    enabled: true # 是否在 lore 中显示附魔描述
+    threshold: 5 # 超过此数量时，将不显示附魔描述
+    word-wrap: 27 # 每行字符数
     format: "&8"
 
-  require-enchantable: true # If EcoEnchants should not display on non-enchantable items.
+  require-enchantable: true # EcoEnchants 是否不应显示在不可附魔的物品上
 
-# Options for the /enchantinfo GUI
+# /enchantinfo GUI 的选项
 enchantinfo:
-  rows: 3 # How many rows for the GUI
-  mask: # The background material
+  rows: 3 # GUI 的行数
+  mask: # 背景材质
     items:
       - black_stained_glass_pane
-    pattern: # 1 for the first item, 2 for the second item, etc
+    pattern: # 1 表示第一个物品，2 表示第二个物品，依此类推
       - "111111111"
       - "111101111"
       - "111111111"
   item:
     row: 2
     column: 5
-    show-max-level: true # Whether the book should be the max level or level 1
-    lore: # The description is automatically appended
+    show-max-level: true # 书籍应显示为最高等级还是1级
+    lore: # 描述会自动追加
       - ""
       - "&fMax Level: &a%max_level%"
       - "&fRarity: &a%rarity%"
@@ -109,18 +108,18 @@ enchantinfo:
       - "&fConflicts with: &a%conflicts%"
       - "&fRequires: &a%required%"
 
-  # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
+  # 自定义 GUI 槽位；操作方法见：https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
 
-# Options for the enchant GUI.
+# 附魔 GUI 的选项
 enchant-gui:
-  rows: 6 # How many rows to have in the GUI
-  title: "Enchant GUI &7(%page%/%max_page%)" # The title of the GUI
+  rows: 6 # GUI 的行数
+  title: "Enchant GUI &7(%page%/%max_page%)" # GUI 的标题
 
-  mask: # The background material
+  mask: # 背景材质
     items:
       - black_stained_glass_pane
-    pattern: # 1 for the first item, 2 for the second item, etc
+    pattern: # 1 表示第一个物品，2 表示第二个物品，依此类推
       - "111101111"
       - "111111111"
       - "100000001"
@@ -128,10 +127,10 @@ enchant-gui:
       - "100000001"
       - "111111111"
 
-  # Empty item to show when there is no enchanted book
+  # 当没有附魔书时显示的空物品
   empty-item: gray_stained_glass_pane name:""
 
-  # Options for the info item
+  # 信息物品的选项
   info:
     item: player_head name:"&aHow do I use this?" texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0=
     lore:
@@ -142,29 +141,29 @@ enchant-gui:
     row: 1
     column: 9
 
-  item-row: 1 # The row for the slot to drop in the item
-  item-column: 5 # The column
+  item-row: 1 # 放入物品的槽位所在行
+  item-column: 5 # 放入物品的槽位所在列
 
-  # Options for the page change buttons
+  # 翻页按钮的选项
   page-change:
-    # The sound played when the page is changed
+    # 翻页时播放的声音
     sound:
       enabled: true
       sound: ui.button.click
       pitch: 1.0
       volume: 1.0
     forwards:
-      item: arrow name:"&fNext Page" # The item. Will not show if on the last page.
-      item-inactive: gray_dye name:"&7Next Page" # The item shown on the last page
+      item: arrow name:"&fNext Page" # 物品。在最后一页时不显示。
+      item-inactive: gray_dye name:"&7Next Page" # 最后一页时显示的物品
       row: 6
       column: 6
     backwards:
-      item: arrow name:"&fPrevious Page" # The item. Will not show if on the first page.
-      item-inactive: gray_dye name:"&7Previous Page" # The item shown on the first page
+      item: arrow name:"&fPrevious Page" # 物品。在第一页时不显示。
+      item-inactive: gray_dye name:"&7Previous Page" # 第一页时显示的物品
       row: 6
       column: 4
 
-  # Optional close button for the enchant GUI
+  # 附魔 GUI 的可选关闭按钮
   close-button:
     enabled: true
     item: barrier
@@ -173,26 +172,26 @@ enchant-gui:
     row: 6
     column: 5
 
-  # Options for the area where the enchantments are shown
+  # 显示附魔的区域选项
   enchant-area:
-    width: 7 # The width of the enchantment area
-    height: 3 # The height of the enchantment area
-    row: 3 # The row of the top-left corner of the area
-    column: 2 # The column of the top-left corner of the area
+    width: 7 # 附魔区域的宽度
+    height: 3 # 附魔区域的高度
+    row: 3 # 区域左上角的行
+    column: 2 # 区域左上角的列
 
-  # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
+  # 自定义 GUI 槽位；操作方法见：https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
 
-  # If enabled, /enchant opens a group selection menu first, grouping enchantments
-  # by the group-by setting. If disabled, /enchant opens the flat enchantment list (current behavior).
+  # 如果启用，/enchant 会先打开分组选择菜单，按 group-by 设置对附魔进行分组。
+  # 如果禁用，/enchant 会打开扁平附魔列表（当前行为）。
   grouped: false
 
-  # What to group enchantments by. Only used when grouped is true.
-  # Options: type (from types.yml), rarity (from rarity.yml), target (from targets.yml)
+  # 按什么对附魔进行分组。仅在 grouped 为 true 时使用。
+  # 选项：type（来自 types.yml）、rarity（来自 rarity.yml）、target（来自 targets.yml）
   group-by: type
 
-  # Back button to return from a filtered sub-menu to the group selection menu.
-  # Only shown when grouped is true.
+  # 从筛选后的子菜单返回分组选择菜单的后退按钮。
+  # 仅在 grouped 为 true 时显示。
   back-button:
     enabled: true
     item: arrow name:"&fBack to Groups"
@@ -200,7 +199,7 @@ enchant-gui:
     row: 6
     column: 1
 
-# Options for the group selection GUI (only used when enchant-gui.grouped is true)
+# 分组选择 GUI 的选项（仅在 enchant-gui.grouped 为 true 时使用）
 group-gui:
   rows: 3
   title: "Enchantment Groups"
@@ -213,12 +212,11 @@ group-gui:
       - "100000001"
       - "111111111"
 
-  # Each group must have a unique id matching an entry from the file corresponding
-  # to the group-by setting:
-  #   group-by: type   -> IDs from types.yml   (normal, spell, special, curse)
-  #   group-by: rarity -> IDs from rarity.yml  (common, uncommon, rare, epic, legendary, special, veryspecial)
-  #   group-by: target -> IDs from targets.yml (sword, pickaxe, helmet, bow, etc.)
-  # Groups with unrecognized IDs are silently ignored.
+  # 每个分组必须有一个唯一 id，并与 group-by 设置对应文件中的条目匹配：
+  #   group-by: type   -> 来自 types.yml 的 ID（normal, spell, special, curse）
+  #   group-by: rarity -> 来自 rarity.yml 的 ID（common, uncommon, rare, epic, legendary, special, veryspecial）
+  #   group-by: target -> 来自 targets.yml 的 ID（sword, pickaxe, helmet, bow 等）
+  # 无法识别 ID 的分组会被静默忽略。
   groups:
     - id: normal
       item: enchanted_book name:"&7Normal Enchantments"
@@ -245,12 +243,11 @@ group-gui:
       row: 2
       column: 8
 
-  # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
+  # 自定义 GUI 槽位；操作方法见：https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: []
 
-# Options for converting lore-based enchants (from other plugins) with EcoEnchants enchantments
-# with the same names. If you're switching over from another plugin and don't want your players to
-# lose their enchantments, just switch this on.
+# 将基于 lore 的附魔（来自其他插件）转换为同名 EcoEnchants 附魔的选项。
+# 如果你正从另一个插件切换过来，并且不希望玩家丢失他们的附魔，只需开启此项。
 lore-conversion:
-  enabled: false # If lore conversion should be enabled
-  aggressive: false # Will convert all items in all inventories when opened, likely to use a lot of performance
+  enabled: false # 是否启用 lore 转换
+  aggressive: false # 打开时转换所有库存中的所有物品，可能会消耗大量性能
