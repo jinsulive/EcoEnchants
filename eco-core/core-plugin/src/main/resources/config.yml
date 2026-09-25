@@ -102,11 +102,11 @@ enchantinfo:
     show-max-level: true # 书籍应显示为最高等级还是1级
     lore: # 描述会自动追加
       - ""
-      - "&fMax Level: &a%max_level%"
-      - "&fRarity: &a%rarity%"
-      - "&fApplicable to: &a%targets%"
-      - "&fConflicts with: &a%conflicts%"
-      - "&fRequires: &a%required%"
+      - "&f最高等级: &a%max_level%"
+      - "&f稀有度: &a%rarity%"
+      - "&f可用于: &a%targets%"
+      - "&f冲突附魔: &a%conflicts%"
+      - "&f需要: &a%required%"
 
   # 自定义 GUI 槽位；操作方法见：https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
@@ -114,7 +114,7 @@ enchantinfo:
 # 附魔 GUI 的选项
 enchant-gui:
   rows: 6 # GUI 的行数
-  title: "Enchant GUI &7(%page%/%max_page%)" # GUI 的标题
+  title: "附魔页面 &7(%page%/%max_page%)" # GUI 的标题
 
   mask: # 背景材质
     items:
@@ -132,12 +132,11 @@ enchant-gui:
 
   # 信息物品的选项
   info:
-    item: player_head name:"&aHow do I use this?" texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0=
+    item: player_head name:"&a如何使用?" texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0=
     lore:
-      - "&fPlace an item in the slot at the top,"
-      - "&fand all the enchantments you can add"
-      - "&fto to this item will show up in the"
-      - "&farea below!"
+      - "&f将物品放入上方的槽位,"
+      - "&f你可以添加的所有附魔"
+      - "&f都会显示在下方区域中!"
     row: 1
     column: 9
 
@@ -153,13 +152,13 @@ enchant-gui:
       pitch: 1.0
       volume: 1.0
     forwards:
-      item: arrow name:"&fNext Page" # 物品。在最后一页时不显示。
-      item-inactive: gray_dye name:"&7Next Page" # 最后一页时显示的物品
+      item: arrow name:"&f下一页" # 物品。在最后一页时不显示。
+      item-inactive: gray_dye name:"&7下一页" # 最后一页时显示的物品
       row: 6
       column: 6
     backwards:
-      item: arrow name:"&fPrevious Page" # 物品。在第一页时不显示。
-      item-inactive: gray_dye name:"&7Previous Page" # 第一页时显示的物品
+      item: arrow name:"&f上一页" # 物品。在第一页时不显示。
+      item-inactive: gray_dye name:"&7上一页" # 第一页时显示的物品
       row: 6
       column: 4
 
@@ -167,7 +166,7 @@ enchant-gui:
   close-button:
     enabled: true
     item: barrier
-    name: "&cClose"
+    name: "&c关闭"
     lore: [ ]
     row: 6
     column: 5
@@ -194,7 +193,7 @@ enchant-gui:
   # 仅在 grouped 为 true 时显示。
   back-button:
     enabled: true
-    item: arrow name:"&fBack to Groups"
+    item: arrow name:"&f返回分组"
     lore: []
     row: 6
     column: 1
@@ -202,7 +201,7 @@ enchant-gui:
 # 分组选择 GUI 的选项（仅在 enchant-gui.grouped 为 true 时使用）
 group-gui:
   rows: 3
-  title: "Enchantment Groups"
+  title: "附魔分组"
 
   mask:
     items:
@@ -219,27 +218,27 @@ group-gui:
   # 无法识别 ID 的分组会被静默忽略。
   groups:
     - id: normal
-      item: enchanted_book name:"&7Normal Enchantments"
+      item: enchanted_book name:"&7普通附魔"
       lore:
-        - "&fClick to browse normal enchantments"
+        - "&f点击浏览普通附魔"
       row: 2
       column: 2
     - id: spell
-      item: enchanted_book name:"<gradient:#0575E6:#1E3FBA>Spell Enchantments"
+      item: enchanted_book name:"<gradient:#0575E6:#1E3FBA>法术附魔"
       lore:
-        - "&fClick to browse spell enchantments"
+        - "&f点击浏览法术附魔"
       row: 2
       column: 4
     - id: special
-      item: enchanted_book name:"<gradient:#FB57EC:#EF1DEC>Special Enchantments"
+      item: enchanted_book name:"<gradient:#FB57EC:#EF1DEC>特殊附魔"
       lore:
-        - "&fClick to browse special enchantments"
+        - "&f点击浏览特殊附魔"
       row: 2
       column: 6
     - id: curse
-      item: enchanted_book name:"&cCurse Enchantments"
+      item: enchanted_book name:"&c诅咒附魔"
       lore:
-        - "&fClick to browse curse enchantments"
+        - "&f点击浏览诅咒附魔"
       row: 2
       column: 8
 
