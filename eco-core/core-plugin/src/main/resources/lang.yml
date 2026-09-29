@@ -25,3 +25,31 @@ all: "全部"
 no-conflicts: "无冲突"
 all-conflicts: "所有其他附魔"
 no-required: "无要求"
+
+tradeable:
+  "true": "&a是"
+  "false": "&c否"
+
+enchantable:
+  "true": "&a是"
+  "false": "&c否"
+
+drag-and-drop:
+  "true": "&a是"
+  "false": "&c否"
+
+discoverable:
+  "true": "&a是"
+  "false": "&c否"
+  chests:
+    "true": "&a是"
+    "false": "&c否"
+  fishing:
+    "true": "&a是"
+    "false": "&c否"
+  mob-drops:
+    "true": "&a是"
+    "false": "&c否"
+  raids:
+    "true": "&a是"
+    "false": "&c否"

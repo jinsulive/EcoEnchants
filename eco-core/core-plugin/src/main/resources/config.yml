@@ -107,6 +107,15 @@ enchantinfo:
       - "&f可用于: &a%targets%"
       - "&f冲突附魔: &a%conflicts%"
       - "&f需要: &a%required%"
+      - ""
+      - "&f可交易: &a%tradeable%"
+      - "&f可发现: &a%discoverable%"
+      - "&f可发现 (宝箱): &a%discoverable_chests%"
+      - "&f可发现 (钓鱼): &a%discoverable_fishing%"
+      - "&f可发现 (怪物掉落): &a%discoverable_mob_drops%"
+      - "&f可发现 (袭击/掠夺): &a%discoverable_raids%"
+      - "&f附魔台: &a%enchantable%"
+      - "&f支持拖拽: &a%drag_and_drop%"
 
   # 自定义 GUI 槽位；操作方法见：https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]

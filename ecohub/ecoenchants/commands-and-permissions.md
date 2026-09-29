@@ -1,6 +1,6 @@
 ---
 title: "Commands and Permissions"
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 Every command and its permission node is listed below. Permissions follow the `ecoenchants.command.<name>` pattern and are granted to operators by default.
@@ -15,6 +15,12 @@ Every command and its permission node is listed below. Permissions follow the `e
 | `/ecoenchants import <id>`                                       | Import an enchant from [lrcdb](https://lrcdb.auxilor.io/)               | `ecoenchants.command.import`             |
 | `/ecoenchants export <id>`                                       | Export an enchant to [lrcdb](https://lrcdb.auxilor.io/)                 | `ecoenchants.command.export`             | 
 | `/ecoenchants toggledescriptions`                                | Let players toggle enchantment descriptions                             | `ecoenchants.command.toggledescriptions` |
+
+### PlaceholderAPI
+
+| Placeholder                          | Description                                             |
+|--------------------------------------|---------------------------------------------------------|
+| `%ecoenchants_descriptions_enabled%` | Whether the player has enchantment descriptions enabled |
 
 ### Additional permissions
 
