@@ -2,6 +2,10 @@
 # EcoEnchants
 # by Auxilor
 #
+
+# 禁用自定义附魔的世界
+disabled-in-worlds: []
+
 # 附魔台中附魔物品的选项
 enchanting-table:
   enabled: true # 自定义附魔是否可以通过附魔台获得
@@ -16,6 +20,8 @@ villager:
   pass-through-chance: 25 # 保持书籍原样、应用原版/无附魔的概率
   book-multiplier: 0.14 # 对附魔书获得附魔概率应用的乘数（用于平衡附魔数量）
   reduction: 5 # 获得每个后续附魔的概率都会除以此数值，例如第2个附魔的概率是第1个的 5 分之一，第3个再除以 5，依此类推
+  # 注意：附魔书交易最终只会获得一个附魔效果。如果掷出自定义附魔效果
+  #，则会替换交易最初提供的附魔效果。
 
 # 在自然战利品中获得自定义附魔的选项
 loot:
@@ -83,6 +89,14 @@ display:
     threshold: 5 # 超过此数量时，将不显示附魔描述
     word-wrap: 27 # 每行字符数
     format: "&8"
+
+  book-targets:
+    enabled: false # 是否显示附魔书的附魔效果适用范围
+    format: "&7适用范围：&e%targets%" # 添加到每本书附魔效果下方的文字
+
+  book-drag-and-drop-price:
+    enabled: false # 是否显示附魔书的拖放价格（如果支持拖放功能）
+    format: "&7拖放价格：&e%price%" # 添加到每本书附魔效果下方的文字
 
   require-enchantable: true # EcoEnchants 是否不应显示在不可附魔的物品上
 
