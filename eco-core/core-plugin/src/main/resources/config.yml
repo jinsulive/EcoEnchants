@@ -98,6 +98,9 @@ display:
     enabled: false # 是否显示附魔书的拖放价格（如果支持拖放功能）
     format: "&7拖放价格：&e%price%" # 添加到每本书附魔效果下方的文字
 
+  book-item:
+    priority: type # 如果书籍物品同时设置了类型和稀有度，那么使用哪一个：类型还是稀有度？
+
   require-enchantable: true # EcoEnchants 是否不应显示在不可附魔的物品上
 
 # /enchantinfo GUI 的选项
